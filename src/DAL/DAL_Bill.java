@@ -3,10 +3,7 @@ package DAL;
 import DTO.DTO_Bill;
 
 import java.sql.ResultSet;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
@@ -49,8 +46,16 @@ public class DAL_Bill {
         insertValues.put("bill_id",bill.getBill_ID());
         insertValues.put("date",bill.getDate());
         insertValues.put("total",bill.getTotal());
-        //todo bill detail has list product
         Boolean check = myConnectUnit.Insert(tableName, insertValues);
+        //todo bill detail has list product
+        for (String ProductLine: bill.getProductInstance()
+             ) {
+            HashMap<String,Object> insertFroreig=new HashMap<>();
+            insertFroreig.put("bill_id",bill.getBill_ID());
+            insertFroreig.put("product_instance_id",ProductLine);
+            Boolean checkK = myConnectUnit.Insert("billdetails", insertFroreig);
+        }
+
 
         myConnectUnit.Close();
         return check;

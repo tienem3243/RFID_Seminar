@@ -8,14 +8,14 @@ public class DTO_Bill {
     private String bill_ID;
     private Date date;
     private Float total;
-    private List<String> productLines=new ArrayList<>();
+    private List<String> productInstance =new ArrayList<>();
 
     public DTO_Bill(){}
     public DTO_Bill(String bill_ID, Date date, Float total, List<String> productLines) {
         this.bill_ID = bill_ID;
         this.date = date;
         this.total = total;
-        this.productLines = productLines;
+        this.productInstance = productLines;
     }
 
     public String getBill_ID() {
@@ -42,11 +42,11 @@ public class DTO_Bill {
         this.total = total;
     }
 
-    public List<String> getProductLines() {
-        return productLines;
+    public List<String> getProductInstance() {
+        return productInstance;
     }
 
-    public void setProductLines(List<String> productLines) {
-        this.productLines = productLines;
+    public void setProductInstance(List<String> productInstance) {
+        this.productInstance = productInstance;
     }
 }
