@@ -1,9 +1,16 @@
 package BLL;
 
 import BLL.Read;
+import DAL.DAL_Bill;
+import DAL.DAL_ProductLine;
+import DAL.DAL_TagRead;
+import DTO.DTO_Bill;
+import DTO.DTO_ProductLine;
+import DTO.DTO_TagRead;
 import com.caen.RFIDLibrary.CAENRFIDException;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Set;
 
 public class TestConnect {
@@ -23,7 +30,12 @@ public class TestConnect {
 //    }
 
     public static void main(String[] args) throws Exception {
-        TestintializeTag();
+        DAL_ProductLine dal=new DAL_ProductLine();
+       List<DTO_ProductLine> listBill= dal.readDB();
+        for (DTO_ProductLine d:listBill
+             ) {
+            System.out.println(d.getName());
+        }
     }
 
     // this test readTag function

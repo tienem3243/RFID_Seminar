@@ -12,7 +12,9 @@ public class DAL_TagRead {
     MyConnectUnit myConnectUnit;
     String namTable="tagread";
 
-    //add a tag to database, hard to use because database is hard binding, you need extacly exist instance id
+    /**
+     *Them tag vao database. Hien tai cai nay kha kho dung vs ko can nen ko can de y
+     */
     public  boolean addTag(DTO_TagRead tag) throws Exception {
         myConnectUnit =new MyConnectUnit();
         HashMap<String, Object> insertValues = new HashMap<>();

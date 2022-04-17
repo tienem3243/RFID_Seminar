@@ -6,7 +6,12 @@ import java.util.HashMap;
 
 public class Read {
 
-	public static void main(String[] args) throws Exception {}
+
+	public static void main(String[] args) throws Exception {
+	}
+	/**
+	 * Lấy thông tin từ tag
+	 */
 	public static HashMap<String,String> ReadTag() throws CAENRFIDException {
 		HashMap<String,String> FreeID=new HashMap<>();
 		// TODO Auto-generated method stub

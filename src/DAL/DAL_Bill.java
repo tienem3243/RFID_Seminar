@@ -14,7 +14,9 @@ public class DAL_Bill {
     MyConnectUnit myConnectUnit;
     String tableName="bill";
 
-    //read database
+    /**
+     * Lấy thông tin từ Database
+     */
     public List<DTO_Bill> readDB(String condition,String orderBy) throws Exception {
         myConnectUnit = new MyConnectUnit();
 
@@ -36,6 +38,9 @@ public class DAL_Bill {
     public  List<DTO_Bill> readDB() throws Exception {
         return readDB(null);
     }
+    /**
+     * Them bill xuong database
+     */
     public Boolean addBill(DTO_Bill bill) throws Exception {
         myConnectUnit = new MyConnectUnit();
 
@@ -44,6 +49,7 @@ public class DAL_Bill {
         insertValues.put("bill_id",bill.getBill_ID());
         insertValues.put("date",bill.getDate());
         insertValues.put("total",bill.getTotal());
+        //todo bill detail has list product
         Boolean check = myConnectUnit.Insert(tableName, insertValues);
 
         myConnectUnit.Close();

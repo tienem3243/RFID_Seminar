@@ -11,7 +11,9 @@ public class DAL_ProductLine {
     MyConnectUnit myConnectUnit;
     String nameTable="producline";
 
-    //read database and return a list of product
+    /**
+     * Lấy thông tin từ Database
+     */
     public List<DTO_ProductLine> readDB(String condition, String orderBy) throws Exception {
         myConnectUnit = new MyConnectUnit();
 
