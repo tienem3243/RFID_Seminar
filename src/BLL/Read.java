@@ -42,7 +42,7 @@ public class Read {
 	            for (int i = 0; i < MyTags.length; i++)
 	            {
 					FreeID.put(hex(MyTags[i].GetId()) ,"");
-	                System.out.println("EPC: "+ hex(MyTags[i].GetId())  + " | Antenna : " +MyTags[i].GetAntenna() +" | TID:"+ (MyTags[i].GetTID()) +" | RSSI : "+Integer.valueOf(MyTags[i].GetRSSI()));
+	                System.out.println("EPC: "+ hex(MyTags[i].GetId())+" "+hex(MyTags[i].GetId()).length());
 	            }
 	        }
 	        

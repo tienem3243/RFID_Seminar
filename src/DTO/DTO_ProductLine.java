@@ -2,7 +2,7 @@ package DTO;
 
 public class DTO_ProductLine {
     private String productLineID;
-    private Float price;
+    private Float price=0f;
     private String name;
 
     public DTO_ProductLine(String productLineID, Float price, String name) {

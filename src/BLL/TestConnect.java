@@ -10,10 +10,7 @@ import DTO.DTO_ProductLine;
 import DTO.DTO_TagRead;
 import com.caen.RFIDLibrary.CAENRFIDException;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class TestConnect {
     //this test of date input
@@ -55,7 +52,7 @@ public class TestConnect {
 //    }
 */
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
 
     }
     // this test readTag function
